@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.Apis", "Ri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.Domain", "Riktam.GroupChat.Domain\Riktam.GroupChat.Domain.csproj", "{950EA2A4-62E3-4849-949F-4AC6D4C2C8D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.MSSqlDbProvider", "Riktam.GroupChat.MSSqlDbProvider\Riktam.GroupChat.MSSqlDbProvider.csproj", "{1D389052-C5DB-44B4-88C5-D504ADB639FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.SqlDbProvider", "Riktam.GroupChat.SqlDbProvider\Riktam.GroupChat.SqlDbProvider.csproj", "{1D389052-C5DB-44B4-88C5-D504ADB639FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
