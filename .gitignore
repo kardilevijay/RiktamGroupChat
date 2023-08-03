@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/Riktam.Groups/Riktam.Groups.Domain.Shared/obj
+/src/Riktam.Users/src/Riktam.Users.Api/obj
+/src/.vs/Riktam.GroupChat
+/src/Riktam.GroupChat.Apis/obj
+/src/Riktam.GroupChat.Domain/obj
+/src/Riktam.GroupChat.MSSqlDbProvider/obj
