@@ -9,3 +9,8 @@
 /src/Riktam.GroupChat.Apis/obj
 /src/Riktam.GroupChat.Domain/obj
 /src/Riktam.GroupChat.MSSqlDbProvider/obj
+/src/Riktam.GroupChat.Apis/bin/Debug/net6.0
+/src/Riktam.GroupChat.Domain/bin/Debug/net6.0
+/src/Riktam.GroupChat.MSSqlDbProvider/bin/Debug/net6.0
+/src/Riktam.GroupChat.SqlDbProvider/bin/Debug/net6.0
+/src/Riktam.GroupChat.SqlDbProvider/obj
