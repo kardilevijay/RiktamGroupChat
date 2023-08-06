@@ -16,5 +16,6 @@ public static class SqlDbProviderConfigrator
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         });
         services.AddTransient<IUserRepository, UserRepository>();
+        services.AddAutoMapper(typeof(SqlDbProviderConfigrator));
     }
 }

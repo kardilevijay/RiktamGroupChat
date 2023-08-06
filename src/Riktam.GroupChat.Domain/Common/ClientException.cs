@@ -1,6 +1,4 @@
-﻿using System.Runtime.Serialization;
-
-namespace Riktam.GroupChat.Domain.Common;
+﻿namespace Riktam.GroupChat.Domain.Common;
 
 public class ClientException : Exception
 {

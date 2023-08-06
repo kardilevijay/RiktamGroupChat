@@ -7,11 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A9AE2F78-477D-497C-929D-587A90CEDA23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.Apis", "Riktam.GroupChat.Apis\Riktam.GroupChat.Apis.csproj", "{29586F5C-2CE6-4CAE-AD31-A17761F85A02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riktam.GroupChat.Apis", "Riktam.GroupChat.Apis\Riktam.GroupChat.Apis.csproj", "{29586F5C-2CE6-4CAE-AD31-A17761F85A02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.Domain", "Riktam.GroupChat.Domain\Riktam.GroupChat.Domain.csproj", "{950EA2A4-62E3-4849-949F-4AC6D4C2C8D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riktam.GroupChat.Domain", "Riktam.GroupChat.Domain\Riktam.GroupChat.Domain.csproj", "{950EA2A4-62E3-4849-949F-4AC6D4C2C8D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.SqlDbProvider", "Riktam.GroupChat.SqlDbProvider\Riktam.GroupChat.SqlDbProvider.csproj", "{1D389052-C5DB-44B4-88C5-D504ADB639FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riktam.GroupChat.SqlDbProvider", "Riktam.GroupChat.SqlDbProvider\Riktam.GroupChat.SqlDbProvider.csproj", "{1D389052-C5DB-44B4-88C5-D504ADB639FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.Tests.Behavioral", "Riktam.GroupChat.Tests.Behavioral\Riktam.GroupChat.Tests.Behavioral.csproj", "{0294BFF3-FA24-488B-BF43-2E7AE643C19E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.Tests.EndToEnd", "Riktam.GroupChat.Tests.EndToEnd\Riktam.GroupChat.Tests.EndToEnd.csproj", "{F1550C19-1296-461D-8747-C69F69EBACFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riktam.GroupChat.Tests.Common", "Riktam.GroupChat.Tests.Common\Riktam.GroupChat.Tests.Common.csproj", "{BFA16FDB-B6CF-40A1-A98D-9287921FE5BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,12 +37,27 @@ Global
 		{1D389052-C5DB-44B4-88C5-D504ADB639FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D389052-C5DB-44B4-88C5-D504ADB639FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D389052-C5DB-44B4-88C5-D504ADB639FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0294BFF3-FA24-488B-BF43-2E7AE643C19E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0294BFF3-FA24-488B-BF43-2E7AE643C19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0294BFF3-FA24-488B-BF43-2E7AE643C19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0294BFF3-FA24-488B-BF43-2E7AE643C19E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1550C19-1296-461D-8747-C69F69EBACFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1550C19-1296-461D-8747-C69F69EBACFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1550C19-1296-461D-8747-C69F69EBACFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1550C19-1296-461D-8747-C69F69EBACFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA16FDB-B6CF-40A1-A98D-9287921FE5BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA16FDB-B6CF-40A1-A98D-9287921FE5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA16FDB-B6CF-40A1-A98D-9287921FE5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA16FDB-B6CF-40A1-A98D-9287921FE5BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1D389052-C5DB-44B4-88C5-D504ADB639FF} = {46510DEA-D555-4FE6-B176-59FF78804997}
+		{0294BFF3-FA24-488B-BF43-2E7AE643C19E} = {A9AE2F78-477D-497C-929D-587A90CEDA23}
+		{F1550C19-1296-461D-8747-C69F69EBACFD} = {A9AE2F78-477D-497C-929D-587A90CEDA23}
+		{BFA16FDB-B6CF-40A1-A98D-9287921FE5BF} = {A9AE2F78-477D-497C-929D-587A90CEDA23}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {002D4E9B-E387-4EF2-818E-139170B9E9F8}

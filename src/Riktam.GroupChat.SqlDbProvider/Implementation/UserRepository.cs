@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Riktam.GroupChat.Domain.Models;
 using Riktam.GroupChat.Domain.Providers;
 using Riktam.GroupChat.SqlDbProvider.Infrastructure;
@@ -9,49 +10,65 @@ namespace Riktam.GroupChat.SqlDbProvider.Implementation;
 internal class UserRepository : IUserRepository
 {
     private readonly GroupChatDbContext _dbContext;
+    private readonly IMapper _mapper;
 
-    public UserRepository(GroupChatDbContext dbContext)
+    public UserRepository(GroupChatDbContext dbContext, IMapper mapper)
     {
         _dbContext = dbContext;
+        _mapper = mapper;
     }
 
-    public async Task<UserRecord> AddAsync(UserRecord newUser)
+    public async Task<IEnumerable<UserRecord>> GetAllUsersAsync()
     {
-        var newDbUser = Map(newUser);
-        await _dbContext.Users.AddAsync(newDbUser);
-        await _dbContext.SaveChangesAsync();
-        return Map(newDbUser);
+        var users = await _dbContext.Users.AsNoTracking().ToListAsync();
+        return _mapper.Map<IEnumerable<UserRecord>>(users);
+    }
+
+    public async Task<UserRecord?> GetUserByIdAsync(int id)
+    {
+        var user = await _dbContext.Users.FindAsync(id);
+        return user is null ? null : _mapper.Map<UserRecord>(user);
     }
 
     public async Task<UserRecord?> GetByEmailAsync(string email)
     {
         var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
-        return user is null ? null : Map(user);
+        return user is null ? null : _mapper.Map<UserRecord>(user);
     }
 
     public async Task<UserRecord?> GetByUserNameAsync(string userName)
     {
         var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserName == userName);
-        return user is null ? null : Map(user);
+        return user is null ? null : _mapper.Map<UserRecord>(user);
     }
 
-    private static UserRecord Map(User user)
+    public async Task<UserRecord> AddAsync(UserRecord newUser)
     {
-        return new UserRecord
-        {
-            Id = user.Id,
-            UserName = user.UserName,
-            Email = user.Email,
-            Password = user.Password
-        };
+        var newDbUser = _mapper.Map<User>(newUser);
+        await _dbContext.Users.AddAsync(newDbUser);
+        await _dbContext.SaveChangesAsync();
+        return _mapper.Map<UserRecord>(newDbUser);
     }
-    private static User Map(UserRecord newUser)
+
+    public async Task<UserRecord?> UpdateAsync(UserRecord user)
     {
-        return new User
+        var dbUser = await _dbContext.Users.FindAsync(user.Id);
+        if (dbUser != null)
         {
-            UserName = newUser.UserName,
-            Email = newUser.Email,
-            Password = newUser.Password
-        };
+            _mapper.Map(user, dbUser);
+            await _dbContext.SaveChangesAsync();
+            return _mapper.Map<UserRecord>(dbUser);
+        }
+        return null;
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        var user = await _dbContext.Users.FindAsync(id);
+        if (user != null)
+        {
+            _dbContext.Users.Remove(user);
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }

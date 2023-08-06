@@ -14,3 +14,9 @@
 /src/Riktam.GroupChat.MSSqlDbProvider/bin/Debug/net6.0
 /src/Riktam.GroupChat.SqlDbProvider/bin/Debug/net6.0
 /src/Riktam.GroupChat.SqlDbProvider/obj
+/src/Riktam.GroupChat.Tests.Behavioral/obj
+/src/Riktam.GroupChat.Tests.Common/obj
+/src/Riktam.GroupChat.Tests.EndToEnd/obj
+/src/Riktam.GroupChat.Tests.Behavioral/bin/Debug/net6.0
+/src/Riktam.GroupChat.Tests.Common/bin/Debug/net6.0
+/src/Riktam.GroupChat.Tests.EndToEnd/bin/Debug/net6.0

@@ -2,12 +2,8 @@
 
 namespace Riktam.GroupChat.Apis.Models;
 
-public record CreateUserModel
+public record UpdateUserModel
 {
-    [Required]
-    [MaxLength(50)]
-    public string? UserName { get; init; }
-
     [Required]
     [EmailAddress]
     [MaxLength(50)]

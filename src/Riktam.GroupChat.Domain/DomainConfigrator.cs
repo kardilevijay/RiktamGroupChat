@@ -10,5 +10,6 @@ public static class DomainConfigrator
     {
         services.AddTransient<IUserService, UserService>();
         services.AddTransient<IHashGenerator, SHA256HashGenerator>();
+        services.AddTransient<IAuthService, AuthService>();
     }
 }

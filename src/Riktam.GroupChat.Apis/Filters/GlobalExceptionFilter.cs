@@ -25,6 +25,10 @@ public class GlobalExceptionFilter : IAsyncExceptionFilter
         {
             context.Result = new ConflictObjectResult(GetProblemDetails(conflictException));
         }
+        else if (context.Exception is UnauthorizedAccessException)
+        {
+            context.Result = new UnauthorizedResult();
+        }
         else
         {
             context.Result = new ObjectResult(new { Message = "An error occurred while processing the request." })
