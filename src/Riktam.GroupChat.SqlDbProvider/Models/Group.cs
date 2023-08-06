@@ -13,4 +13,6 @@ public record Group
     public string Name { get; init; } = string.Empty;
 
     public virtual ICollection<GroupMessage> GroupMessages { get; init; } = default!;
+
+    public virtual ICollection<GroupMembership> GroupMemberships { get; init; } = default!;
 }

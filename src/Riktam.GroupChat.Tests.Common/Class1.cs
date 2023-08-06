@@ -1,7 +1,6 @@
-﻿namespace Riktam.GroupChat.Tests.Common
-{
-    public class Class1
-    {
+﻿namespace Riktam.GroupChat.Tests.Common;
 
-    }
+public class Class1
+{
+
 }

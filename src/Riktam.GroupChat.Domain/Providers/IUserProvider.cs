@@ -2,7 +2,7 @@
 
 namespace Riktam.GroupChat.Domain.Providers;
 
-public interface IUserRepository
+public interface IUserProvider
 {
     Task<IEnumerable<UserRecord>> GetAllUsersAsync();
     Task<UserRecord?> GetByEmailAsync(string email);

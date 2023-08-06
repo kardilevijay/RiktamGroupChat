@@ -10,11 +10,11 @@ namespace Riktam.GroupChat.Domain.Services;
 
 public class AuthService : IAuthService
 {
-    private readonly IUserRepository _userRepository;
+    private readonly IUserProvider _userRepository;
     private readonly IHashGenerator _hashGenerator;
     private readonly IConfiguration _configuration;
 
-    public AuthService(IUserRepository userRepository, IHashGenerator hashGenerator, IConfiguration configuration)
+    public AuthService(IUserProvider userRepository, IHashGenerator hashGenerator, IConfiguration configuration)
     {
         _userRepository = userRepository;
         _hashGenerator = hashGenerator;

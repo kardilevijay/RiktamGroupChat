@@ -6,10 +6,10 @@ namespace Riktam.GroupChat.Domain.Services;
 
 public class UserService : IUserService
 {
-    private readonly IUserRepository _userRepository;
+    private readonly IUserProvider _userRepository;
     private readonly IHashGenerator _hashGenerator;
 
-    public UserService(IUserRepository userRepository, IHashGenerator hashGenerator)
+    public UserService(IUserProvider userRepository, IHashGenerator hashGenerator)
     {
         _userRepository = userRepository;
         _hashGenerator = hashGenerator;

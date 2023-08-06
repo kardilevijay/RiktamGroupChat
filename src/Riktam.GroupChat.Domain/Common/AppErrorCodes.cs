@@ -9,6 +9,12 @@ public enum AppErrorCodes
     [Description("The request is invalid")]
     InvalidRequest,
 
+    [Description("The requested resource not found")]
+    NotFound,
+
+    [Description("The requested resource already exists")]
+    AlreadyExists,
+
     [Description("The username is already taken")]
     UserNameAlreadyTaken,
 

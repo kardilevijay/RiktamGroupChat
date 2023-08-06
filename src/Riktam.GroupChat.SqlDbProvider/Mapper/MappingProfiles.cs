@@ -9,5 +9,8 @@ public class MappingProfiles : Profile
     public MappingProfiles()
     {
         CreateMap<User, UserRecord>().ReverseMap();
+        CreateMap<Group, GroupRecord>().ReverseMap();
+        CreateMap<GroupMessage, GroupMessageRecord>().ReverseMap();
+        CreateMap<GroupMembership, GroupMembershipRecord>().ReverseMap();
     }
 }
